@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type = "text/css" rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+  <title>Bernie Quotes</title>
+  <style>
+
+  body {
+    text-align: center;
+    margin-left: 320px;
+    margin-right: 320px;
+  }
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 84px;
+    margin: 50px auto 30px auto;
+  }
+
+  button {
+    font-family: 'Montserrat', serif;
+  }
+
+  #quotes {
+    height: 125px;
+    font-family: 'Montserrat', serif;
+    font-size: 18px;
+    padding: 20px 20px;
+  }
+
+  a {
+    font-family: Montserrat, sans-serif;
+  }
+
+  </style>
+</head>
+<body>
+  <h1 class='text-primary'>Bernie  Quotes</h1>
+  <button class='btn' id='quote_button' onclick='new_quote()'>Have some Bernie</button>
+  <br/>
+  <br/>
+  <div id='quotes'>What would Bernie say...?</div>
+  <!--<a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size='large'>
+  Wanna tweet it?</a>-->
+  <br/>
+  <img src="https://c2.staticflickr.com/4/3749/11277133614_f4444c755e_b.jpg" />
+  <p>*Image by <a target="_blank" href="https://www.flickr.com/photos/donkeyhotey/">DonkeyHotey</a> under <a target="_blank" href="https://creativecommons.org/licenses/by/2.0/legalcode">CC License Attr 2.0</a></p>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script>
+  var quotes = [
+    "What Wall Street and credit card companies are doing is really not much different from what gangsters and loan sharks do who make predatory loans. While the bankers wear three-piece suits and don't break the knee caps of those who can't pay back, they still are destroying people's lives.",
+    "Do the elected officials in Washington stand with ordinary Americans - working families, children, the elderly, the poor - or will the extraordinary power of billionaire campaign contributors and Big Money prevail? The American people, by the millions, must send Congress the answer to that question.",
+    "Look, if you have somebody who doesn't have health insurance, who doesn't have a doctor or dentist, and in order to deal with their cold or flu or dental problem, they go to an emergency room - in general, that visit will cost ten times more than walking into a community health center.",
+    "If you ask me about my views on the environment, on women's rights, on gay rights, I am liberal. I don't have a problem with that at all. Some of my best friends are liberal.",
+    "I think the overwhelming majority of the American people know that we have got to stand together, that we're going to grow together, that we're going to survive together, and that if we start splintering, we're not going to succeed in a highly competitive international economy.",
+    "We need an energy revolution by breaking our dependence on fossil fuels, polluting fuels... I am very, very confident our small state will lead this. We will be noticed by the country and the world.",
+    "Who do you think controls the Republican Party? Big money controls the Republican Party. This is where their campaign contributions come from.",
+    "The Fed has got to become a more democratic institution that is responsive to the needs of the middle class, not just Wall Street CEOs.",
+    "You know, I think many people have the mistaken impression that Congress regulates Wall Street. In truth that's not the case. The real truth is that Wall Street regulates the Congress.",
+    "Wall Street is greedy, reckless and they operate illegally. That's fine. But what do you do?",
+    "To be honest with you, I worry about concentration of ownership in media, where you have a handful of media conglomerates largely controlling what we see, hear and read.",
+    "The U.S. Constitution is an extraordinary document. In my view, it should not be amended often.",
+    "The Federal Reserve has a responsibility to ensure the safety and soundness of financial institutions and to contain systemic risks in financial markets.",
+    "In my view, a corporation is not a person. A corporation does not have First Amendment rights to spend as much money as it wants, without disclosure, on a political campaign.",
+    "After all, Wall Street is clearly the most powerful lobbying force on Capitol Hill. From 1998 through 2008, the financial sector spent over $5 billion in lobbying and campaign contributions to deregulate Wall Street.",
+    "It is incomprehensible that drug companies still get away with charging Americans twice as much, or more, than citizens of Canada or Europe for the exact same drugs manufactured by the exact same companies.",
+    "If you look at the newspapers here - the Washington papers - most of the discussion deals with campaign gossip.",
+    "The Postal Service is a vitally important institution for the American people. It must be saved.",
+    "There are a lot of smart honest, progressive people who I think can be good presidents.",
+    "Social Security is a promise that we cannot and must not break.",
+    "I don't believe there's a red state in America where people believe you should cut Medicare, Social Security and veterans' benefits rather than doing away with corporate tax loopholes.",
+    "At a time when the Post Office is losing substantial revenue from the instantaneous flow of information by email and on the Internet, slowing mail service is a recipe for disaster."
+  ];
+
+  var button_text = [
+    'Ballsier Bernie',
+    'Better Bernie',
+    'Bigger Bernie',
+    'Brainier Bernie',
+    'Bawdier Bernie',
+    'Beefier Bernie',
+    'Brasher Bernie',
+    'Broodier Bernie',
+    'Bouncier Bernie',
+    'Bonier Bernie',
+    'Breezier Bernie',
+    'Brighter Bernie',
+    'Blunter Bernie',
+    'Braver Bernie',
+    'Beastlier Bernie',
+    'Brisker Bernie',
+    'Burlier Bernie',
+    'Buffer Bernie',
+    'Bustier Bernie',
+    'Busier Bernie'
+  ];
+
+  function new_quote() {
+    $('#quotes').fadeOut(function() {
+      var quote = quotes[Math.floor(Math.random() * quotes.length)];
+      var btn_text = button_text[Math.floor(Math.random() * button_text.length)];
+      document.getElementById('quotes').innerHTML = quote;
+      document.getElementById('quote_button').innerHTML = btn_text;
+    }).fadeIn();
+  }
+
+/*function getTwitterURL() {
+  var ext = url_friendly( document.getElementById('quotes').innerHTML);
+  return "https://twitter.com/intent/tweet?text=" + Hello%20world"
+}
+
+function url_friendly(str) {
+  return str.replace(' ', '%20');
+}*/
+</script>
+</body>
